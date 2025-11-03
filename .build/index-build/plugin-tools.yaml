@@ -1,0 +1,47 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "BatComputer-arm64-apple-macosx26.0-debug.module": ["<BatComputer-arm64-apple-macosx26.0-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<BatComputer-arm64-apple-macosx26.0-debug.module>"]
+  "test": ["<BatComputer-arm64-apple-macosx26.0-debug.module>"]
+default: "main"
+nodes:
+  "/Users/ethan/Bat Computer Voice Assistant/batComputer/Sources/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/ethan/Bat Computer Voice Assistant/batComputer/Sources/BatComputerApp.swift","/Users/ethan/Bat Computer Voice Assistant/batComputer/Sources/BatComputerManager.swift","/Users/ethan/Bat Computer Voice Assistant/batComputer/Sources/BatComputerShortcuts.swift","/Users/ethan/Bat Computer Voice Assistant/batComputer/Sources/BatmanResponses.swift","/Users/ethan/Bat Computer Voice Assistant/batComputer/Sources/HomeAutomation.swift","/Users/ethan/Bat Computer Voice Assistant/batComputer/Sources/VoiceAuthenticator.swift","/Users/ethan/Bat Computer Voice Assistant/batComputer/Sources/WeatherService.swift"]
+    outputs: ["/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/sources"]
+    description: "Write auxiliary file /Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/sources"
+
+  "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Library/Developer/CommandLineTools/usr/bin/swiftc"]
+    outputs: ["/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+
+  "<BatComputer-arm64-apple-macosx26.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/Modules/BatComputer.swiftmodule"]
+    outputs: ["<BatComputer-arm64-apple-macosx26.0-debug.module>"]
+
+  "C.BatComputer-arm64-apple-macosx26.0-debug.module":
+    tool: shell
+    inputs: ["/Users/ethan/Bat Computer Voice Assistant/batComputer/Sources/BatComputerApp.swift","/Users/ethan/Bat Computer Voice Assistant/batComputer/Sources/BatComputerManager.swift","/Users/ethan/Bat Computer Voice Assistant/batComputer/Sources/BatComputerShortcuts.swift","/Users/ethan/Bat Computer Voice Assistant/batComputer/Sources/BatmanResponses.swift","/Users/ethan/Bat Computer Voice Assistant/batComputer/Sources/HomeAutomation.swift","/Users/ethan/Bat Computer Voice Assistant/batComputer/Sources/VoiceAuthenticator.swift","/Users/ethan/Bat Computer Voice Assistant/batComputer/Sources/WeatherService.swift","/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/sources"]
+    outputs: ["/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/Modules/BatComputer.swiftmodule"]
+    description: "Compiling Swift Module 'BatComputer' (7 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","BatComputer","-emit-dependencies","-emit-module","-emit-module-path","/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/Modules/BatComputer.swiftmodule","-output-file-map","/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/output-file-map.json","-incremental","@/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/sources","-I","/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx12.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j8","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-swift-version","5","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/ethan/Bat Computer Voice Assistant/batComputer/Sources/","/Users/ethan/Bat Computer Voice Assistant/batComputer/Package.swift","/Users/ethan/Bat Computer Voice Assistant/batComputer/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

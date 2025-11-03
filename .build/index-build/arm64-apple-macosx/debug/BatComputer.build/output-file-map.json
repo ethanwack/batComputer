@@ -1,0 +1,54 @@
+{
+  "": {
+    "swift-dependencies": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/master.swiftdeps"
+  },
+  "/Users/ethan/Bat Computer Voice Assistant/batComputer/Sources/BatComputerApp.swift": {
+    "dependencies": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/BatComputerApp.d",
+    "object": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/BatComputerApp.swift.o",
+    "swiftmodule": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/BatComputerApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/BatComputerApp.swiftdeps",
+    "diagnostics": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/BatComputerApp.dia"
+  },
+  "/Users/ethan/Bat Computer Voice Assistant/batComputer/Sources/BatComputerManager.swift": {
+    "dependencies": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/BatComputerManager.d",
+    "object": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/BatComputerManager.swift.o",
+    "swiftmodule": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/BatComputerManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/BatComputerManager.swiftdeps",
+    "diagnostics": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/BatComputerManager.dia"
+  },
+  "/Users/ethan/Bat Computer Voice Assistant/batComputer/Sources/BatComputerShortcuts.swift": {
+    "dependencies": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/BatComputerShortcuts.d",
+    "object": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/BatComputerShortcuts.swift.o",
+    "swiftmodule": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/BatComputerShortcuts~partial.swiftmodule",
+    "swift-dependencies": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/BatComputerShortcuts.swiftdeps",
+    "diagnostics": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/BatComputerShortcuts.dia"
+  },
+  "/Users/ethan/Bat Computer Voice Assistant/batComputer/Sources/BatmanResponses.swift": {
+    "dependencies": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/BatmanResponses.d",
+    "object": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/BatmanResponses.swift.o",
+    "swiftmodule": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/BatmanResponses~partial.swiftmodule",
+    "swift-dependencies": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/BatmanResponses.swiftdeps",
+    "diagnostics": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/BatmanResponses.dia"
+  },
+  "/Users/ethan/Bat Computer Voice Assistant/batComputer/Sources/HomeAutomation.swift": {
+    "dependencies": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/HomeAutomation.d",
+    "object": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/HomeAutomation.swift.o",
+    "swiftmodule": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/HomeAutomation~partial.swiftmodule",
+    "swift-dependencies": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/HomeAutomation.swiftdeps",
+    "diagnostics": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/HomeAutomation.dia"
+  },
+  "/Users/ethan/Bat Computer Voice Assistant/batComputer/Sources/VoiceAuthenticator.swift": {
+    "dependencies": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/VoiceAuthenticator.d",
+    "object": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/VoiceAuthenticator.swift.o",
+    "swiftmodule": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/VoiceAuthenticator~partial.swiftmodule",
+    "swift-dependencies": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/VoiceAuthenticator.swiftdeps",
+    "diagnostics": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/VoiceAuthenticator.dia"
+  },
+  "/Users/ethan/Bat Computer Voice Assistant/batComputer/Sources/WeatherService.swift": {
+    "dependencies": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/WeatherService.d",
+    "object": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/WeatherService.swift.o",
+    "swiftmodule": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/WeatherService~partial.swiftmodule",
+    "swift-dependencies": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/WeatherService.swiftdeps",
+    "diagnostics": "/Users/ethan/Bat Computer Voice Assistant/batComputer/.build/index-build/arm64-apple-macosx/debug/BatComputer.build/WeatherService.dia"
+  }
+}
