@@ -58,14 +58,7 @@ class BatComputerManager: ObservableObject {
     private func startListening() async {
         guard !isListening else { return }
         
-        let audioSession = AVAudioSession.sharedInstance()
-        do {
-            try audioSession.setCategory(.record, mode: .measurement, options: .duckOthers)
-            try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
-        } catch {
-            lastResponse = "Audio session setup failed"
-            return
-        }
+        // macOS doesn't need AVAudioSession setup like iOS does
         
         recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
         
@@ -123,8 +116,6 @@ class BatComputerManager: ObservableObject {
     }
     
     private func handleCommand(_ command: String) async {
-        // Handle commands exactly as in the previous version
-        // Copy the command handling logic from the previous main.swift
         guard command.contains("computer") else { return }
         
         guard let commandStart = command.range(of: "computer")?.upperBound else { return }
@@ -137,9 +128,22 @@ class BatComputerManager: ObservableObject {
             formatter.timeStyle = .short
             speak("It is \(formatter.string(from: Date()))")
             
-        // Add all the other command cases from the previous version...
-        // Weather, home automation, Batcave systems, etc.
-        
+        case let cmd where cmd.contains("weather"):
+            speak("Weather service integration coming soon.")
+            
+        case let cmd where cmd.contains("lights"):
+            if cmd.contains("on") {
+                speak(homeAutomation.controlDevice("lights", action: "ON"))
+            } else if cmd.contains("off") {
+                speak(homeAutomation.controlDevice("lights", action: "OFF"))
+            }
+            
+        case let cmd where cmd.contains("hello") || cmd.contains("hi"):
+            speak(BatmanResponses.getRandomResponse(from: BatmanResponses.greetings))
+            
+        case let cmd where cmd.contains("help"):
+            speak("Available commands: time, date, lights on, lights off, hello, goodbye")
+            
         default:
             speak("Command not recognized. Please try again or ask for help.")
         }

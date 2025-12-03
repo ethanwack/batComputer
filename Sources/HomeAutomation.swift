@@ -1,5 +1,4 @@
 import Foundation
-import BluetoothLinux
 
 class HomeAutomation {
     private var devices: [String: String] = [
@@ -10,7 +9,7 @@ class HomeAutomation {
     ]
     
     func controlDevice(_ device: String, action: String) -> String {
-        guard let currentState = devices[device.lowercased()] else {
+        guard devices[device.lowercased()] != nil else {
             return "Device not found in the system."
         }
         

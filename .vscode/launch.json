@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:batComputer}",
+            "name": "Debug BatComputer",
+            "target": "BatComputer",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug BatComputer"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:batComputer}",
+            "name": "Release BatComputer",
+            "target": "BatComputer",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release BatComputer"
+        }
+    ]
+}

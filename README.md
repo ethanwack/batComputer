@@ -62,6 +62,21 @@ chmod +x install.sh
 ./install.sh
 ```
 
+4. **Grant Permissions (CRITICAL):**
+   - Open **System Settings** → **Privacy & Security**
+   - Find **Microphone** and enable your terminal app
+   - Find **Speech Recognition** and enable your terminal app
+   - Note: You may be prompted to enter your password
+
+5. Run Bat Computer:
+```bash
+batcomputer
+```
+or if symlink failed:
+```bash
+./.build/release/BatComputer
+```
+
 ## Setting Up Voice Activation
 
 ### On macOS:
@@ -145,6 +160,57 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Support
 
 For support, please open an issue in the GitHub repository or contact the maintainer.
+
+## Troubleshooting
+
+### Voice Commands Not Working
+
+**Issue:** Speech recognition not initializing or voice commands not recognized.
+
+**Solution:**
+1. Ensure permissions are granted:
+   - System Settings → Privacy & Security → Microphone (enable your terminal app)
+   - System Settings → Privacy & Security → Speech Recognition (enable your terminal app)
+2. Check that microphone is working: `System Settings → Sound → Input`
+3. Try restarting the application
+4. Ensure you say "Computer" before your command
+
+### Build Errors After Git Clone
+
+**Issue:** `swift build` fails with dependency errors.
+
+**Solution:**
+1. Clean build artifacts: `swift package clean`
+2. Reset package cache: `rm -rf .build Package.resolved`
+3. Rebuild: `swift build -c release`
+4. If still failing, check your Swift version: `swift --version` (requires 5.9+)
+
+### "Command not found: batcomputer"
+
+**Issue:** Symlink not created properly.
+
+**Solution:**
+- Run the executable directly: `./.build/release/BatComputer`
+- Or manually create symlink: `sudo ln -sf $(pwd)/.build/release/BatComputer /usr/local/bin/batcomputer`
+
+### Permission Denied on Installation
+
+**Issue:** Cannot create symlink in `/usr/local/bin/`
+
+**Solution:**
+- Run install script with sudo: `sudo ./install.sh`
+- Or use the direct executable: `./.build/release/BatComputer`
+
+### Speech Recognition Unavailable
+
+**Issue:** "Speech recognizer not available"
+
+**Solution:**
+1. Verify macOS version is 13.0 or later: `sw_vers`
+2. Enable Siri to ensure speech recognition is set up:
+   - System Settings → Siri & Spotlight → Enable "Listen for 'Hey Siri'"
+3. Check language preferences match "en-US"
+4. Restart the application
 
 ## Disclaimer
 
